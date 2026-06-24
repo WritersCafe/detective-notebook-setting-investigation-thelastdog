@@ -50,12 +50,6 @@ body{
   background:linear-gradient(to bottom,rgba(0,0,0,.00),rgba(0,0,0,.08));
 }
 
-.heroVideoLink{
-position:absolute;left:53%;top:81%;transform:translate(-50%,-50%) rotate(-3deg);
-z-index:4;display:inline-flex;align-items:center;justify-content:center;gap:10px;
-background:rgba(217,164,65,.97);color:#3e2a20;text-decoration:none;border:3px solid rgba(62,42,32,.9);border-radius:14px;padding:12px 18px;font-family:Arial,sans-serif;font-weight:900;font-size:22px;
-box-shadow:0 8px 16px rgba(0,0,0,.28);width:340px;min-height:72px;text-align:center;}
-.heroVideoLink::before{content:"▶";display:inline-grid;place-items:center;width:36px;height:36px;min-width:36px;border-radius:50%;background:#3e2a20;color:#fff;}
 
 .brand{
   position:absolute;
@@ -275,7 +269,7 @@ ul{margin:8px 0 0 22px;padding:0;font-size:16px;line-height:1.35}
 </head>
 <body>
 <div class="shell">
-  <section class="hero" aria-label="The Last Dog case file image"><a class="heroVideoLink" href="https://youtu.be/20--tXwVuKw" target="_blank" rel="noopener">Message from Brock</a></section>
+  <section class="hero" aria-label="The Last Dog case file image"></section>
 
   <section class="panel">
     <div class="topbar">
@@ -293,12 +287,12 @@ ul{margin:8px 0 0 22px;padding:0;font-size:16px;line-height:1.35}
 
       <div class="casefile">
         <div class="label" data-en="Today’s Case File" data-es="Caso de hoy">Today’s Case File</div>
-        <h2 data-en="How does the setting influence Brock’s actions and the development of the plot?" data-es="¿Cómo influye el escenario en las acciones de Brock y en el desarrollo de la trama?">How does the setting influence Brock’s actions and the development of the plot?</h2>
+        <h2 data-en="How does the setting influence the character’s actions and the development of the plot?" data-es="¿Cómo influye el escenario en las acciones del personaje y en el desarrollo de la trama?">How does the setting influence the character’s actions and the development of the plot?</h2>
       </div>
 
       <div class="mission">
-        <div data-en="Mission: Read paragraphs 13–24. Record your hunt in your dialectical journal. Red = concrete details. Green = commentary." data-es="Misión: Lee los párrafos 13–24. Registra tu investigación en tu diario dialéctico. Rojo = detalles concretos. Verde = comentario.">
-          <strong>Mission:</strong> Read paragraphs 13–24. Record your hunt in your dialectical journal. <strong>Red</strong> = concrete details. <strong>Green</strong> = commentary.
+        <div data-en="Mission: Read the assigned paragraphs. Record your hunt in your dialectical journal. Red = concrete details. Green = commentary." data-es="Misión: Lee los párrafos asignados. Registra tu investigación en tu diario dialéctico. Rojo = detalles concretos. Verde = comentario.">
+          <strong>Mission:</strong> Read the assigned paragraphs. Record your hunt in your dialectical journal. <strong>Red</strong> = concrete details. <strong>Green</strong> = commentary.
         </div>
         <div class="timer" id="timer">12:00</div>
       </div>
@@ -308,13 +302,13 @@ ul{margin:8px 0 0 22px;padding:0;font-size:16px;line-height:1.35}
         <article class="step red">
           <div class="stepHead" onclick="toggleStep(this)">
             <div class="badge">1</div>
-            <div><h3 data-en="Gather Setting Clues" data-es="Busca pistas del escenario">Gather Setting Clues</h3><small data-en="Red concrete details in your journal" data-es="Detalles concretos en rojo en tu diario">Red concrete details in your journal</small></div>
+            <div><h3 data-en="Gather Setting Clues" data-es="Busca pistas del escenario">Gather Setting Clues</h3><small data-en="Setting includes place, time, objects, technology, rules, warnings, limits, and conditions." data-es="El escenario incluye lugar, tiempo, objetos, tecnología, reglas, advertencias, límites y condiciones.">Setting includes place, time, objects, technology, rules, warnings, limits, and conditions.</small></div>
             <div class="chev">⌄</div>
           </div>
           <div class="stepBody">
-            <div class="coach">🧠 <strong>Thinking Coach:</strong> Detectives do not start with an answer. They collect clues about the world first.</div>
+            <div class="coach">🧠 <strong>Thinking Coach:</strong> Detectives do not start with an answer. They collect clues about the setting first. Remember: conditions are part of the setting.</div>
             <div class="notes">
-              <div class="notecard"><strong>Look for:</strong><ul><li>place clues</li><li>time/world clues</li><li>objects or technology</li><li>rules, warnings, or limits</li><li>natural world details</li></ul></div>
+              <div class="notecard"><strong>Look for:</strong><ul><li>place clues</li><li>time/world clues</li><li>objects or technology</li><li>rules, warnings, or limits</li><li>natural world details</li><li>references to people, stories, or history <em>(allusions)</em></li></ul></div>
               <div class="notecard"><strong>Write in red:</strong> Quote the exact words or short phrase. Include paragraph number.</div>
             </div>
           </div>
@@ -323,16 +317,17 @@ ul{margin:8px 0 0 22px;padding:0;font-size:16px;line-height:1.35}
         <article class="step green">
           <div class="stepHead" onclick="toggleStep(this)">
             <div class="badge">2</div>
-            <div><h3 data-en="Condition Detective" data-es="Detective de condiciones">Condition Detective</h3><small data-en="What does this reveal about the world?" data-es="¿Qué revela esto sobre el mundo?">What does this reveal about the world?</small></div>
+            <div><h3 data-en="Questioning Detective" data-es="Detective de preguntas">Questioning Detective</h3><small data-en="What do these clues reveal about life in this world?" data-es="¿Qué revelan estas pistas sobre la vida en este mundo?">What do these clues reveal about life in this world?</small></div>
             <div class="chev">⌄</div>
           </div>
           <div class="stepBody">
-            <div class="coach">🧠 <strong>Thinking Coach:</strong> A setting detail matters when it reveals what life is like in this world.</div>
+            <div class="coach">🧠 <strong>Thinking Coach:</strong> After detectives collect clues, they question what the clues reveal. Do not add more evidence here. Use your red clues to explain what life is like in this world.</div>
             <div class="stems">
               <div class="stem">This detail suggests that people in this world ______.</div>
               <div class="stem">This setting appears to be ______.</div>
               <div class="stem">This clue reveals that life here is ______.</div>
               <div class="stem">The author wants us to notice that ______.</div>
+              <div class="stem">These clues reveal that the conditions in this world are ______.</div>
             </div>
           </div>
         </article>
@@ -340,16 +335,16 @@ ul{margin:8px 0 0 22px;padding:0;font-size:16px;line-height:1.35}
         <article class="step amber">
           <div class="stepHead" onclick="toggleStep(this)">
             <div class="badge">3</div>
-            <div><h3 data-en="Pressure Detective" data-es="Detective de presión">Pressure Detective</h3><small data-en="What challenge or pressure does this create?" data-es="¿Qué desafío o presión crea esto?">What challenge or pressure does this create?</small></div>
+            <div><h3 data-en="Pressure Detective" data-es="Detective de presión">Pressure Detective</h3><small data-en="What pressure, challenge, or conflict do these conditions create?" data-es="¿Qué presión, desafío o conflicto crean estas condiciones?">What pressure, challenge, or conflict do these conditions create?</small></div>
             <div class="chev">⌄</div>
           </div>
           <div class="stepBody">
-            <div class="coach">🧠 <strong>Thinking Coach:</strong> Settings create conditions. Conditions create pressure.</div>
+            <div class="coach">🧠 <strong>Thinking Coach:</strong> Use the specific conditions you found. Ask how those conditions create pressure, challenge, or conflict.</div>
             <div class="stems">
-              <div class="stem">Because of this setting, ______.</div>
-              <div class="stem">This condition might create pressure for characters to ______.</div>
+              <div class="stem">Because of these conditions, ______.</div>
+              <div class="stem">These conditions might create pressure for the character to ______.</div>
               <div class="stem">Living in this environment would make it difficult to ______.</div>
-              <div class="stem">One problem this setting could cause is ______.</div>
+              <div class="stem">One problem these conditions could cause is ______.</div>
             </div>
           </div>
         </article>
@@ -357,16 +352,17 @@ ul{margin:8px 0 0 22px;padding:0;font-size:16px;line-height:1.35}
         <article class="step sky">
           <div class="stepHead" onclick="toggleStep(this)">
             <div class="badge">4</div>
-            <div><h3 data-en="Character Detective" data-es="Detective de personaje">Character Detective</h3><small data-en="How might Brock or others respond?" data-es="¿Cómo podría responder Brock u otros?">How might Brock or others respond?</small></div>
+            <div><h3 data-en="Belief Detective" data-es="Detective de creencias">Belief Detective</h3><small data-en="How might these conditions change what the character believes, feels, wonders, or values?" data-es="¿Cómo podrían estas condiciones cambiar lo que el personaje cree, siente, se pregunta o valora?">How might these conditions change what the character believes, feels, wonders, or values?</small></div>
             <div class="chev">⌄</div>
           </div>
           <div class="stepBody">
-            <div class="coach">🧠 <strong>Thinking Coach:</strong> Now connect the pressure to a character’s thoughts, choices, or actions.</div>
+            <div class="coach">🧠 <strong>Thinking Coach:</strong> Detectives know that characters rarely act first. Usually, something changes inside them first. Look for how the setting changes what the character thinks, questions, fears, values, or accepts.</div>
             <div class="stems">
-              <div class="stem">A character living here might ______.</div>
-              <div class="stem">Because of this setting, Brock may ______.</div>
-              <div class="stem">This environment could influence characters to ______.</div>
-              <div class="stem">People in this setting would likely ______.</div>
+              <div class="stem">These conditions are causing the character to question ______.</div>
+              <div class="stem">The character is beginning to realize ______.</div>
+              <div class="stem">The character no longer believes ______.</div>
+              <div class="stem">Living in this world is changing how the character thinks about ______.</div>
+              <div class="stem">This experience is changing what the character values because ______.</div>
             </div>
           </div>
         </article>
@@ -374,16 +370,17 @@ ul{margin:8px 0 0 22px;padding:0;font-size:16px;line-height:1.35}
         <article class="step pink">
           <div class="stepHead" onclick="toggleStep(this)">
             <div class="badge">5</div>
-            <div><h3 data-en="Plot Detective" data-es="Detective de trama">Plot Detective</h3><small data-en="How could this affect the events?" data-es="¿Cómo podría afectar los eventos?">How could this affect the events?</small></div>
+            <div><h3 data-en="Decision/Action Detective" data-es="Detective de decisión/acción">Decision/Action Detective</h3><small data-en="How do the character’s changing beliefs influence decisions and actions?" data-es="¿Cómo influyen las creencias cambiantes del personaje en sus decisiones y acciones?">How do the character’s changing beliefs influence decisions and actions?</small></div>
             <div class="chev">⌄</div>
           </div>
           <div class="stepBody">
-            <div class="coach">🧠 <strong>Thinking Coach:</strong> If setting changes what characters do, it also changes what happens next.</div>
+            <div class="coach">🧠 <strong>Thinking Coach:</strong> Once beliefs change, decisions usually change. Those decisions and actions are what move the plot forward.</div>
             <div class="stems">
-              <div class="stem">This setting could cause ______.</div>
-              <div class="stem">Because of this condition, the plot may ______.</div>
-              <div class="stem">This detail might lead to ______.</div>
-              <div class="stem">An event that could happen because of this setting is ______.</div>
+              <div class="stem">Because the character now believes ______, the character decides to ______.</div>
+              <div class="stem">The character chooses to ______ because ______.</div>
+              <div class="stem">The character’s changing perspective causes the character to ______.</div>
+              <div class="stem">This decision moves the story forward because ______.</div>
+              <div class="stem">The character’s new understanding leads to ______.</div>
             </div>
           </div>
         </article>
@@ -395,14 +392,14 @@ ul{margin:8px 0 0 22px;padding:0;font-size:16px;line-height:1.35}
             <div class="chev">⌄</div>
           </div>
           <div class="stepBody">
-            <div class="coach">🧠 <strong>Thinking Coach:</strong> Now connect your red detail to your green thinking. Your goal is not just to list clues. Your goal is to explain how the setting creates a chain of influence.</div>
+            <div class="coach">🧠 <strong>Thinking Coach:</strong> Now connect your red detail to your green thinking. Your goal is not just to list clues. Your goal is to explain how the setting creates a chain of influence: setting shapes pressure, pressure shapes thinking, thinking shapes decisions/actions, and decisions/actions move the plot.</div>
             <div class="chain">
-              <span class="c1">Setting Detail</span><b>→</b><span class="c2">Condition</span><b>→</b><span class="c3">Pressure</span><b>→</b><span class="c4">Character Response</span><b>→</b><span class="c5">Plot Development</span>
+              <span class="c1">Setting Detail</span><b>→</b><span class="c2">Condition</span><b>→</b><span class="c3">Pressure</span><b>→</b><span class="c4">Belief / Perspective</span><b>→</b><span class="c5">Decision / Action</span><b>→</b><span class="c5">Plot Development</span>
             </div>
             <div class="chainPrompt">📓 In your notebook, choose your strongest setting detail and turn your chain into a paragraph.</div>
             <div class="chainFrame">
               <div class="paragraphFrame">
-                The setting detail <span class="blank"></span> suggests that life in Brock’s world is <span class="blank"></span>. This creates a condition where <span class="blank"></span>. Because of this condition, Brock experiences pressure to <span class="blank"></span>. As a result, Brock responds by <span class="blank"></span>. This influences the development of the plot because <span class="blank"></span>.
+                The setting detail <span class="blank"></span> suggests that life in the character’s world is <span class="blank"></span>. These conditions create pressure because <span class="blank"></span>. As a result, the character begins to question or realize <span class="blank"></span>. Because the character’s thinking changes, the character decides to <span class="blank"></span> or acts by <span class="blank"></span>. This influences the development of the plot because <span class="blank"></span>.
               </div>
               
             </div>
